@@ -6,64 +6,64 @@
 
 const zooAnimals = [
   {
-    animal_name : "Jackal, asiatic",
-    population : 5,
-    scientific_name : "Canis aureus",
-    state : "Kentucky"
+    animal_name: "Jackal, asiatic",
+    population: 5,
+    scientific_name: "Canis aureus",
+    state: "Kentucky",
   },
   {
-    animal_name : "Screamer, southern",
-    population : 1,
-    scientific_name : "Chauna torquata",
-    state : "Alabama"
+    animal_name: "Screamer, southern",
+    population: 1,
+    scientific_name: "Chauna torquata",
+    state: "Alabama",
   },
   {
-    animal_name : "White spoonbill",
-    population : 8,
-    scientific_name : "Platalea leucordia",
-    state : "Georgia"
+    animal_name: "White spoonbill",
+    population: 8,
+    scientific_name: "Platalea leucordia",
+    state: "Georgia",
   },
   {
-    animal_name : "White-cheeked pintail",
-    population : 1,
-    scientific_name : "Anas bahamensis",
-    state : "Oregon"
+    animal_name: "White-cheeked pintail",
+    population: 1,
+    scientific_name: "Anas bahamensis",
+    state: "Oregon",
   },
   {
-    animal_name : "Black-backed jackal",
-    population : 2,
-    scientific_name : "Canis mesomelas",
-    state : "Washington"
+    animal_name: "Black-backed jackal",
+    population: 2,
+    scientific_name: "Canis mesomelas",
+    state: "Washington",
   },
   {
-    animal_name : "Brolga crane",
-    population : 9,
-    scientific_name : "Grus rubicundus",
-    state : "New Mexico"
+    animal_name: "Brolga crane",
+    population: 9,
+    scientific_name: "Grus rubicundus",
+    state: "New Mexico",
   },
   {
-    animal_name : "Common melba finch",
-    population : 5,
-    scientific_name : "Pytilia melba",
-    state : "Pennsylvania"
+    animal_name: "Common melba finch",
+    population: 5,
+    scientific_name: "Pytilia melba",
+    state: "Pennsylvania",
   },
   {
-    animal_name : "Pampa gray fox",
-    population : 10,
-    scientific_name : "Pseudalopex gymnocercus",
-    state : "Connecticut"
+    animal_name: "Pampa gray fox",
+    population: 10,
+    scientific_name: "Pseudalopex gymnocercus",
+    state: "Connecticut",
   },
   {
-    animal_name : "Hawk-eagle, crowned",
-    population : 10,
-    scientific_name : "Spizaetus coronatus",
-    state : "Florida"
+    animal_name: "Hawk-eagle, crowned",
+    population: 10,
+    scientific_name: "Spizaetus coronatus",
+    state: "Florida",
   },
   {
-    animal_name : "Australian pelican",
-    population : 5,
-    scientific_name : "Pelecanus conspicillatus",
-    state : "West Virginia"
+    animal_name: "Australian pelican",
+    population: 5,
+    scientific_name: "Pelecanus conspicillatus",
+    state: "West Virginia",
   },
 ];
 
@@ -78,9 +78,11 @@ Canis aureus."
 */
 const displayNames = [];
 
-zooAnimals.forEach(
-    item => {displayNames.push(
-        `Name: ${item.animal_name}, Scientific: ${item.scientific_name}.`)});
+zooAnimals.forEach((item) => {
+  displayNames.push(
+    `Name: ${item.animal_name}, Scientific: ${item.scientific_name}.`
+  );
+});
 
 console.log(displayNames);
 
@@ -93,7 +95,7 @@ each string following this pattern: "jackal, asiatic". Log the resut.
 */
 
 let lowCaseAnimalNames = [];
-lowCaseAnimalNames = zooAnimals.map(item => item.animal_name.toLowerCase());
+lowCaseAnimalNames = zooAnimals.map((item) => item.animal_name.toLowerCase());
 
 console.log(lowCaseAnimalNames);
 
@@ -106,7 +108,7 @@ only the animals with a population less than 5.
 */
 
 let lowPopulationAnimals = [];
-lowPopulationAnimals = zooAnimals.filter(item => item.population < 5);
+lowPopulationAnimals = zooAnimals.filter((item) => item.population < 5);
 
 console.log(lowPopulationAnimals);
 
@@ -134,7 +136,9 @@ console.log(populationTotal);
  * return the invocation of cb, passing a and b into cb as arguments
  */
 
-function consume(a, b, cb) { return cb(a, b) };
+function consume(a, b, cb) {
+  return cb(a, b);
+}
 
 /* Step 2: Create several functions to callback with consume();
  * Create a function named add that returns the sum of two numbers
@@ -143,11 +147,17 @@ function consume(a, b, cb) { return cb(a, b) };
  * returns "Hello first-name last-name, nice to meet you!"
  */
 
-function add(a, b) { return a + b }
+function add(a, b) {
+  return a + b;
+}
 
-function multiply(a, b) { return a * b }
+function multiply(a, b) {
+  return a * b;
+}
 
-function greeting(a, b) { return `Hello ${a} ${b}, nice to meet you!` }
+function greeting(a, b) {
+  return `Hello ${a} ${b}, nice to meet you!`;
+}
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 console.log(consume(2, 2, add));
